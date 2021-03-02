@@ -50,7 +50,7 @@ export class DepartmentsList extends Component {
     }
 
     fetchDepartments(){
-        this.setState({loading: true })   
+       
         //'https://sofiacoelho.co.uk/api/test.php?flag=department'
         fetch('https://sofiacoelho.co.uk/api/test.php?flag=department')
         .then(response => response.json()) //passes http response to javascript
@@ -85,11 +85,13 @@ export class DepartmentsList extends Component {
         
         //to refresh page every time a record is added, deleted or updated
         if(this.state.refresh){ // runs everytime a change is made
+           
             this.fetchDepartments();
         }
     }
 
     componentDidMount(){
+        this.setState({loading: true })   
         this.fetchDepartments();    
 
     }

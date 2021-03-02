@@ -51,8 +51,8 @@ export class LocationList extends Component {
     }
 
     fetchLocations(){
-        this.setState({loading: true })   
-         //'http://sofiacoelho.co.uk/api/test.php?flag=location'
+         
+         //'https://sofiacoelho.co.uk/api/test.php?flag=location'
          fetch('https://sofiacoelho.co.uk/api/test.php?flag=location')
          .then(response => response.json()) //passes http response to javascript
          .then((json) => {//awaits promise return
@@ -89,6 +89,7 @@ export class LocationList extends Component {
     }
 
     componentDidMount(){
+        this.setState({loading: true })  
         this.fetchLocations();
     }
 

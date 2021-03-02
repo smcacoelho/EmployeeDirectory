@@ -2,11 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
-import {
-    Route,
-    Link,
-    
-  } from "react-router-dom";
+import {Link} from "react-router-dom";
 
   import { FaTrash } from "react-icons/fa";
   import { RiGroupFill } from "react-icons/ri";
@@ -26,11 +22,11 @@ export class MyCard extends React.Component{
                     <Link to={`${this.props.useMatch.url}/${this.props.id}`}>
                             {this.props.name} 
                     </Link>
-                    {this.props.delFlag == 'delete'? <Button className = 'float-right ' variant='link' onClick={this.props.delete}><FaTrash></FaTrash></Button>:<></>}
+                    {this.props.delFlag === 'delete'? <Button className = 'float-right ' variant='link' onClick={this.props.delete}><FaTrash></FaTrash></Button>:<></>}
                     
                 </Card.Header>
                 <ListGroup variant="flush">
-                    {this.props.flag == 'location'?                             //location page displays only number of employees
+                    {this.props.flag === 'location'?                             //location page displays only number of employees
                     <ListGroup.Item><RiGroupFill></RiGroupFill>{this.props.emps}
                      
                     </ListGroup.Item>: 

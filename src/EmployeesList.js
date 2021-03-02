@@ -137,7 +137,7 @@ export class EmployeesList extends Component {
 
 
     fetchEmployees(){
-        this.setState({loading: true })
+        
          //'https://sofiacoelho.co.uk/api/test.php?flag=employee'
          fetch('https://sofiacoelho.co.uk/api/test.php?flag=employee')
          .then(response => response.json())
@@ -180,7 +180,9 @@ export class EmployeesList extends Component {
         }
     }
     componentDidMount(){
-        this.fetchEmployees();      
+        this.setState({loading: true })
+        this.fetchEmployees();  
+
     }
 
     sortByAsc(){
