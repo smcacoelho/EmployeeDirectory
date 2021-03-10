@@ -53,7 +53,7 @@ export class LocationList extends Component {
     fetchLocations(){
          
          //'https://sofiacoelho.co.uk/api/test.php?flag=location'
-         fetch('https://sofiacoelho.co.uk/api/test.php?flag=location')
+         fetch('https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=location')
          .then(response => response.json()) //passes http response to javascript
          .then((json) => {//awaits promise return
          this.setState({
@@ -70,7 +70,7 @@ export class LocationList extends Component {
     componentDidUpdate(){
         if(this.state.delete){
             //`https://sofiacoelho.co.uk/api/test.php?flag=deleteLoc&id=${this.state.idToDelete}`
-            fetch(`https://sofiacoelho.co.uk/api/test.php?flag=deleteLoc&id=${this.state.idToDelete}`)
+            fetch(`https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=deleteLoc&id=${this.state.idToDelete}`)
             .then(response => response.json())
             .then(() => {
             

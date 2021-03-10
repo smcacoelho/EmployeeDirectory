@@ -52,7 +52,7 @@ export class DepartmentsList extends Component {
     fetchDepartments(){
        
         //'https://sofiacoelho.co.uk/api/test.php?flag=department'
-        fetch('https://sofiacoelho.co.uk/api/test.php?flag=department')
+        fetch('https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=department')
         .then(response => response.json()) //passes http response to javascript
         .then((json) => {//awaits promise return
           this.setState({
@@ -68,7 +68,7 @@ export class DepartmentsList extends Component {
     componentDidUpdate(){
         if(this.state.delete){
             //`https://sofiacoelho.co.uk/api/test.php?flag=deleteDep&id=${this.state.idToDelete}`
-            fetch(`https://sofiacoelho.co.uk/api/test.php?flag=deleteDep&id=${this.state.idToDelete}`)
+            fetch(`https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=deleteDep&id=${this.state.idToDelete}`)
             .then(response => response.json())
             .then(() => {
             

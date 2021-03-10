@@ -15,7 +15,7 @@ export class EmployeeSelect extends React.Component{
 
     componentDidMount(){
 //'https://sofiacoelho.co.uk/api/test.php?flag=employee'
-        fetch('https://sofiacoelho.co.uk/api/test.php?flag=employee')
+        fetch('https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=employee')
         .then(response => response.json()) //passes http response to javascript
         .then((json) => {//awaits promise return
           this.setState({

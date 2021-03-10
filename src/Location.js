@@ -27,7 +27,7 @@ export class Location extends React.Component{
 
         //fetches number of employees in a location or department    
         //`https://sofiacoelho.co.uk/api/test.php?flag=${this.props.match.path}&id=${this.props.match.params.id}`
-        fetch(`https://sofiacoelho.co.uk/api/test.php?flag=${this.props.match.path}&id=${this.props.match.params.id}`
+        fetch(`https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=${this.props.match.path}&id=${this.props.match.params.id}`
         )
         .then(response => response.json()) //passes http response to javascript
         .then((json) => {//awaits promise return

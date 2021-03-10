@@ -12,7 +12,7 @@ export class DepartmentsList extends Component {
 
     componentDidMount(){
         //'https://sofiacoelho.co.uk/api/test.php?flag=employee'
-        fetch('https://sofiacoelho.co.uk/api/test.php?flag=employee')
+        fetch('https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=employee')
         .then(response => response.json())
         .then((json) => {
           alert(json);

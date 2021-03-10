@@ -15,19 +15,19 @@ import Button from 'react-bootstrap/Button';
 import {
   Route,
   Link,
-  BrowserRouter,Switch, Redirect
+  BrowserRouter,Switch
 } from "react-router-dom";
 
 class App extends React.Component {
   render(){
     return(
-      <BrowserRouter>
+      <BrowserRouter basename="/EmployeeDirectory/build">
       
       <Container>
         <div className='row justify-content-center mt-4'>
           
           <ButtonGroup aria-label="Nav" className='nav' toggle='true'>
-              <Button id = 'nav1' variant="outline-primary" as={Link} to = "/build"></Button>
+              <Button id = 'nav1' variant="outline-primary" as={Link} to = "/"></Button>
               <Button id = 'nav2' variant="outline-primary" as={Link} to = "/departments" ></Button>
               <Button id = 'nav3' variant="outline-primary" as={Link} to = "/locations" ></Button>
           </ButtonGroup>
@@ -36,8 +36,8 @@ class App extends React.Component {
      </Container>
         <Container>
         <Switch>  
-          <Route exact path ="/build" component={EmployeesList}/>
-          <Route path ="/departments/:id" component={Location}/>
+          <Route exact path ="/" component={EmployeesList}/>
+          <Route path ="/departments/:id" component={Location}/>          
           <Route path ="/departments" component={DepartmentsList}/>
           <Route path ="/locations/:id" component={Location}/>
           <Route path ="/locations" component={LocationList}/>

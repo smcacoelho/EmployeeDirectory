@@ -139,7 +139,7 @@ export class EmployeesList extends Component {
     fetchEmployees(){
         
          //'https://sofiacoelho.co.uk/api/test.php?flag=employee'
-         fetch('https://sofiacoelho.co.uk/api/test.php?flag=employee')
+         fetch('https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=employee')
          .then(response => response.json())
          .then((json) => {
              this.setState({
@@ -162,7 +162,7 @@ export class EmployeesList extends Component {
 
         if(this.state.delete){
             //`https://sofiacoelho.co.uk/api/test.php?flag=deleteEmp&id=${this.state.idToDelete}`
-            fetch(`https://sofiacoelho.co.uk/api/test.php?flag=deleteEmp&id=${this.state.idToDelete}`)
+            fetch(`https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=deleteEmp&id=${this.state.idToDelete}`)
             .then(response => response.json())
             .then(() => {
             

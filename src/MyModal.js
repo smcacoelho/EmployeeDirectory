@@ -22,7 +22,7 @@ export class MyModal extends React.Component {
         if(this.props.flag == 'edit'){                  // update employee table
             data.append('employeeId', this.props.id);
             //"https://sofiacoelho.co.uk/api/test.php?flag=update"
-            var url = "https://sofiacoelho.co.uk/api/test.php?flag=update";
+            var url = "https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=update";
             
             fetch(url, {
             method:'POST',
@@ -33,7 +33,7 @@ export class MyModal extends React.Component {
         }
         if(this.props.flag == 'add'){                   // add to employee table
             //"https://sofiacoelho.co.uk/api/test.php?flag=addEmployee"
-            var url = "https://sofiacoelho.co.uk/api/test.php?flag=addEmployee";
+            var url = "https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=addEmployee";
             
             fetch(url, {
             method:'POST',
@@ -44,7 +44,7 @@ export class MyModal extends React.Component {
         }
         if(this.props.flag == 'addLocation'){           // add to location table
             //"https://sofiacoelho.co.uk/api/test.php?flag=addLocation"
-            var url = "https://sofiacoelho.co.uk/api/test.php?flag=addLocation";
+            var url = "https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=addLocation";
             
             fetch(url, {
             method:'POST',
@@ -55,7 +55,7 @@ export class MyModal extends React.Component {
         }
         if(this.props.flag == 'addDepartment'){         // add to department table
             //"https://sofiacoelho.co.uk/api/test.php?flag=addDepartment"
-            var url = "https://sofiacoelho.co.uk/api/test.php?flag=addDepartment";
+            var url = "https://sofiacoelho.co.uk/EmployeeDirectory/api/test.php?flag=addDepartment";
             
             fetch(url, {
             method:'POST',
